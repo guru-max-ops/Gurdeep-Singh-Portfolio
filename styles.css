@@ -11,6 +11,7 @@
   --content-width: min(1240px, calc(100vw - 48px));
   --radius-large: 34px;
   --radius-medium: 24px;
+  --topbar-height: 112px;
 }
 
 * {
@@ -232,8 +233,8 @@ textarea {
 
 .hero {
   position: relative;
-  min-height: 100svh;
-  padding: 184px 0 74px;
+  min-height: calc(100svh - 24px);
+  padding: calc(var(--topbar-height) + 52px) 0 74px;
 }
 
 .hero::before {
@@ -252,13 +253,14 @@ textarea {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(360px, 560px);
   gap: 48px;
-  align-items: center;
+  align-items: start;
   width: var(--hero-width);
   margin: 0 auto;
 }
 
 .hero-copy {
   max-width: 720px;
+  padding-top: 6px;
 }
 
 .eyebrow,
@@ -526,7 +528,7 @@ textarea {
   width: var(--content-width);
   margin: 0 auto;
   padding: 112px 0;
-  scroll-margin-top: 128px;
+  scroll-margin-top: calc(var(--topbar-height) + 16px);
 }
 
 .section-heading {
@@ -825,7 +827,8 @@ textarea {
   }
 
   .hero {
-    padding-top: 150px;
+    min-height: auto;
+    padding-top: calc(var(--topbar-height) + 34px);
   }
 
   .hero-shell {
