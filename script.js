@@ -146,7 +146,7 @@ function setupMatrixRain() {
   let animationFrame = 0;
   let trailLength = 4;
   let lastStepTime = 0;
-  const stepInterval = 90;
+  const stepInterval = 69;
 
   const resize = () => {
     const scale = window.devicePixelRatio || 1;
