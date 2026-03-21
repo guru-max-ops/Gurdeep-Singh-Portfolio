@@ -4,8 +4,9 @@ const rotatingStatus = document.querySelector("[data-rotating-status]");
 
 const statusLines = [
   "React surfaces. Workflow logic. API-aware delivery.",
-  "Product UI, automation flow, and backend edges designed together.",
+  "Websites, dashboards, and utility apps shaped inside one build system.",
   "Frontend polish with auth, RBAC, and integration discipline.",
+  "Grocery ordering flow, tool interfaces, and backend edges designed together.",
   "AI-assisted execution with verification before release.",
 ];
 
