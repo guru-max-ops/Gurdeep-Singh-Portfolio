@@ -145,6 +145,8 @@ function setupMatrixRain() {
   let fontSize = 18;
   let animationFrame = 0;
   let trailLength = 4;
+  let lastStepTime = 0;
+  const stepInterval = 90;
 
   const resize = () => {
     const scale = window.devicePixelRatio || 1;
@@ -161,7 +163,13 @@ function setupMatrixRain() {
     );
   };
 
-  const draw = () => {
+  const draw = (timestamp = 0) => {
+    if (timestamp - lastStepTime < stepInterval) {
+      animationFrame = window.requestAnimationFrame(draw);
+      return;
+    }
+
+    lastStepTime = timestamp;
     context.fillStyle = "rgba(2, 10, 4, 0.12)";
     context.fillRect(0, 0, window.innerWidth, window.innerHeight);
     context.font = `${fontSize}px IBM Plex Mono`;
@@ -204,6 +212,7 @@ function setupMatrixRain() {
     if (document.hidden) {
       window.cancelAnimationFrame(animationFrame);
     } else {
+      lastStepTime = 0;
       animationFrame = window.requestAnimationFrame(draw);
     }
   });
