@@ -26,7 +26,7 @@ applyProfile(profile);
 hydrateForm(profile);
 setupSettingsPanel();
 setupRevealAnimations();
-setupMatrixRain();
+initializeMatrixRain();
 
 function loadProfile() {
   try {
@@ -137,6 +137,15 @@ function setupRevealAnimations() {
   });
 }
 
+function initializeMatrixRain() {
+  if (document.fonts?.ready) {
+    document.fonts.ready.then(setupMatrixRain);
+    return;
+  }
+
+  setupMatrixRain();
+}
+
 function setupMatrixRain() {
   const canvas = document.getElementById("matrixCanvas");
   const context = canvas.getContext("2d");
@@ -145,14 +154,19 @@ function setupMatrixRain() {
   let fontSize = 18;
   let animationFrame = 0;
   let trailLength = 4;
+  let lastStepTime = 0;
+  const stepInterval = 36;
 
   const resize = () => {
-    const scale = window.devicePixelRatio || 1;
+    const scale = Math.max(window.devicePixelRatio || 1, 2);
     canvas.width = Math.floor(window.innerWidth * scale);
     canvas.height = Math.floor(window.innerHeight * scale);
     canvas.style.width = `${window.innerWidth}px`;
     canvas.style.height = `${window.innerHeight}px`;
     context.setTransform(scale, 0, 0, scale, 0, 0);
+    context.imageSmoothingEnabled = false;
+    context.textBaseline = "top";
+    context.textAlign = "left";
     fontSize = window.innerWidth < 768 ? 14 : 18;
     trailLength = window.innerWidth < 768 ? 3 : 4;
     columns = Array.from(
@@ -161,18 +175,24 @@ function setupMatrixRain() {
     );
   };
 
-  const draw = () => {
+  const draw = (timestamp = 0) => {
+    if (timestamp - lastStepTime < stepInterval) {
+      animationFrame = window.requestAnimationFrame(draw);
+      return;
+    }
+
+    lastStepTime = timestamp;
     context.fillStyle = "rgba(2, 10, 4, 0.12)";
     context.fillRect(0, 0, window.innerWidth, window.innerHeight);
-    context.font = `${fontSize}px IBM Plex Mono`;
+    context.font = `${fontSize}px "IBM Plex Mono", monospace`;
 
     columns.forEach((column, index) => {
       const char = glyphs[Math.floor(Math.random() * glyphs.length)];
-      const x = index * fontSize;
-      const y = columns[index] * fontSize;
+      const x = Math.round(index * fontSize);
+      const y = Math.round(columns[index] * fontSize);
 
       for (let trailIndex = trailLength; trailIndex > 0; trailIndex -= 1) {
-        const trailY = y - trailIndex * fontSize;
+        const trailY = Math.round(y - trailIndex * fontSize);
         if (trailY < -fontSize) {
           continue;
         }
@@ -204,6 +224,7 @@ function setupMatrixRain() {
     if (document.hidden) {
       window.cancelAnimationFrame(animationFrame);
     } else {
+      lastStepTime = 0;
       animationFrame = window.requestAnimationFrame(draw);
     }
   });
