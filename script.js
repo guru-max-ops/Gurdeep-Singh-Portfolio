@@ -1,5 +1,16 @@
 const revealItems = document.querySelectorAll(".reveal");
 const heroStage = document.getElementById("heroStage");
+const topbar = document.querySelector(".topbar");
+const navLinks = Array.from(document.querySelectorAll(".topnav a[href^='#']"));
+const sectionMap = new Map(
+  navLinks
+    .map((link) => {
+      const id = link.getAttribute("href")?.slice(1);
+      const section = id ? document.getElementById(id) : null;
+      return id && section ? [id, { link, section }] : null;
+    })
+    .filter(Boolean)
+);
 const rotatingStatus = document.querySelector("[data-rotating-status]");
 
 const statusLines = [
@@ -12,6 +23,8 @@ const statusLines = [
 
 setupRevealAnimations();
 setupHeroStageMotion();
+setupTopbarState();
+setupActiveNavigation();
 setupStatusRotation();
 initializeMatrixRain();
 
@@ -96,6 +109,59 @@ function setupStatusRotation() {
       rotatingStatus.classList.remove("is-swapping");
     }, 150);
   }, 2600);
+}
+
+function setupTopbarState() {
+  if (!topbar) {
+    return;
+  }
+
+  const updateTopbar = () => {
+    topbar.classList.toggle("is-scrolled", window.scrollY > 12);
+  };
+
+  updateTopbar();
+  window.addEventListener("scroll", updateTopbar, { passive: true });
+}
+
+function setupActiveNavigation() {
+  if (!sectionMap.size) {
+    return;
+  }
+
+  const setActiveLink = (id) => {
+    sectionMap.forEach(({ link }, sectionId) => {
+      const isActive = sectionId === id;
+      link.classList.toggle("is-active", isActive);
+
+      if (isActive) {
+        link.setAttribute("aria-current", "page");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+  };
+
+  const initialId = window.location.hash.slice(1);
+  setActiveLink(sectionMap.has(initialId) ? initialId : "");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const visibleEntry = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((left, right) => right.intersectionRatio - left.intersectionRatio)[0];
+
+      if (visibleEntry?.target?.id) {
+        setActiveLink(visibleEntry.target.id);
+      }
+    },
+    {
+      rootMargin: "-22% 0px -58% 0px",
+      threshold: [0.18, 0.35, 0.55],
+    }
+  );
+
+  sectionMap.forEach(({ section }) => observer.observe(section));
 }
 
 function initializeMatrixRain() {
