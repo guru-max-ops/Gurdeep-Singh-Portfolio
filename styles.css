@@ -91,8 +91,10 @@ textarea {
 }
 
 .topbar {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 50%;
+  z-index: 20;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -100,7 +102,9 @@ textarea {
   width: var(--hero-width);
   margin: 0 auto;
   padding: 18px 0;
-  backdrop-filter: blur(12px);
+  background: transparent;
+  backdrop-filter: none;
+  transform: translateX(-50%);
 }
 
 .brand {
@@ -217,7 +221,7 @@ textarea {
 .hero {
   position: relative;
   min-height: 100svh;
-  padding: 96px 0 74px;
+  padding: 132px 0 74px;
 }
 
 .hero::before {
@@ -510,6 +514,7 @@ textarea {
   width: var(--content-width);
   margin: 0 auto;
   padding: 112px 0;
+  scroll-margin-top: 104px;
 }
 
 .section-heading {
@@ -808,7 +813,7 @@ textarea {
   }
 
   .hero {
-    padding-top: 54px;
+    padding-top: 116px;
   }
 
   .hero-shell {
