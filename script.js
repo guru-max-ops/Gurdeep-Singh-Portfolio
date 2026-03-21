@@ -1,124 +1,31 @@
-const storageKey = "gurdeep-portfolio-profile";
+const revealItems = document.querySelectorAll(".reveal");
+const heroStage = document.getElementById("heroStage");
+const rotatingStatus = document.querySelector("[data-rotating-status]");
 
-const defaultProfile = {
-  headline: "Software Engineer building AI-enhanced products",
-  bio: "Focused on shipping practical product experiences using Generative AI, AI apps, and strong engineering habits.",
-  email: "",
-  location: "",
-  availability: "",
-  github: "",
-  linkedin: "",
-  focus: "Building AI-powered products",
-  role: "AI Generalist",
-};
+const statusLines = [
+  "React surfaces. Workflow logic. API-aware delivery.",
+  "Product UI, automation flow, and backend edges designed together.",
+  "Frontend polish with auth, RBAC, and integration discipline.",
+  "AI-assisted execution with verification before release.",
+];
 
-const profileFields = document.querySelectorAll("[data-profile]");
-const settingsPanel = document.getElementById("settingsPanel");
-const settingsForm = document.getElementById("settingsForm");
-const settingsToggle = document.querySelector(".settings-toggle");
-const settingsClose = document.querySelector(".settings-close");
-const resetProfileButton = document.getElementById("resetProfile");
-const openSettingsButtons = document.querySelectorAll("[data-open-settings]");
-
-let profile = loadProfile();
-
-applyProfile(profile);
-hydrateForm(profile);
-setupSettingsPanel();
 setupRevealAnimations();
+setupHeroStageMotion();
+setupStatusRotation();
 initializeMatrixRain();
 
-function loadProfile() {
-  try {
-    const saved = localStorage.getItem(storageKey);
-    return saved ? { ...defaultProfile, ...JSON.parse(saved) } : { ...defaultProfile };
-  } catch (error) {
-    return { ...defaultProfile };
-  }
-}
-
-function saveProfile(nextProfile) {
-  profile = nextProfile;
-  localStorage.setItem(storageKey, JSON.stringify(profile));
-  applyProfile(profile);
-}
-
-function applyProfile(nextProfile) {
-  profileFields.forEach((field) => {
-    const key = field.dataset.profile;
-    const value = (nextProfile[key] || "").trim();
-    const fallback = field.dataset.fallback || defaultProfile[key] || "";
-
-    if (field.tagName === "A") {
-      field.textContent = value || fallback;
-      field.target = value ? "_blank" : "_self";
-      field.rel = value ? "noreferrer" : "";
-      field.href =
-        value && field.dataset.linkType === "email"
-          ? `mailto:${value}`
-          : value || "#";
-      field.classList.toggle("is-empty", !value);
-      return;
-    }
-
-    field.textContent = value || fallback;
-    field.classList.toggle("is-empty", !value);
-  });
-}
-
-function hydrateForm(nextProfile) {
-  const entries = Object.entries(nextProfile);
-  entries.forEach(([key, value]) => {
-    const input = settingsForm.elements.namedItem(key);
-    if (input) {
-      input.value = value;
-    }
-  });
-}
-
-function setupSettingsPanel() {
-  const openPanel = () => {
-    document.body.classList.add("settings-open");
-    settingsPanel.classList.add("open");
-    settingsPanel.setAttribute("aria-hidden", "false");
-    settingsToggle.setAttribute("aria-expanded", "true");
-  };
-
-  const closePanel = () => {
-    document.body.classList.remove("settings-open");
-    settingsPanel.classList.remove("open");
-    settingsPanel.setAttribute("aria-hidden", "true");
-    settingsToggle.setAttribute("aria-expanded", "false");
-  };
-
-  settingsToggle.addEventListener("click", openPanel);
-  settingsClose.addEventListener("click", closePanel);
-  openSettingsButtons.forEach((button) => button.addEventListener("click", openPanel));
-
-  settingsForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const formData = new FormData(settingsForm);
-    const nextProfile = Object.fromEntries(formData.entries());
-    saveProfile({ ...defaultProfile, ...nextProfile });
-    closePanel();
-  });
-
-  resetProfileButton.addEventListener("click", () => {
-    localStorage.removeItem(storageKey);
-    profile = { ...defaultProfile };
-    hydrateForm(profile);
-    applyProfile(profile);
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      closePanel();
-    }
-  });
-}
-
 function setupRevealAnimations() {
-  const items = document.querySelectorAll(".reveal");
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    revealItems.forEach((item) => item.classList.add("visible"));
+    return;
+  }
+
+  const heroItems = document.querySelectorAll(".hero .reveal");
+  heroItems.forEach((item, index) => {
+    item.style.transitionDelay = `${index * 120}ms`;
+    window.requestAnimationFrame(() => item.classList.add("visible"));
+  });
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -131,10 +38,63 @@ function setupRevealAnimations() {
     { threshold: 0.18 }
   );
 
-  items.forEach((item, index) => {
-    item.style.transitionDelay = `${Math.min(index * 90, 400)}ms`;
+  revealItems.forEach((item, index) => {
+    if (item.closest(".hero")) {
+      return;
+    }
+
+    item.style.transitionDelay = `${Math.min((index + 1) * 70, 420)}ms`;
     observer.observe(item);
   });
+}
+
+function setupHeroStageMotion() {
+  if (!heroStage || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return;
+  }
+
+  const resetStage = () => {
+    heroStage.style.setProperty("--stage-rotate-x", "0deg");
+    heroStage.style.setProperty("--stage-rotate-y", "0deg");
+    heroStage.style.setProperty("--stage-shift-x", "0px");
+    heroStage.style.setProperty("--stage-shift-y", "0px");
+  };
+
+  heroStage.addEventListener("pointermove", (event) => {
+    const bounds = heroStage.getBoundingClientRect();
+    const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+    const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+
+    heroStage.style.setProperty("--stage-rotate-x", `${(-y * 5).toFixed(2)}deg`);
+    heroStage.style.setProperty("--stage-rotate-y", `${(x * 6).toFixed(2)}deg`);
+    heroStage.style.setProperty("--stage-shift-x", `${(x * 10).toFixed(2)}px`);
+    heroStage.style.setProperty("--stage-shift-y", `${(y * 10).toFixed(2)}px`);
+  });
+
+  heroStage.addEventListener("pointerleave", resetStage);
+}
+
+function setupStatusRotation() {
+  if (!rotatingStatus) {
+    return;
+  }
+
+  let lineIndex = 0;
+  rotatingStatus.textContent = statusLines[lineIndex];
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return;
+  }
+
+  window.setInterval(() => {
+    lineIndex = (lineIndex + 1) % statusLines.length;
+    rotatingStatus.classList.add("is-swapping");
+
+    window.setTimeout(() => {
+      rotatingStatus.textContent = statusLines[lineIndex];
+      rotatingStatus.classList.remove("is-swapping");
+    }, 150);
+  }, 2600);
 }
 
 function initializeMatrixRain() {

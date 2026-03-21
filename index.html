@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gurdeep Singh | AI Generalist Engineer</title>
+  <title>Gurdeep Singh | AI-Assisted Full-Stack Product Builder</title>
   <meta
     name="description"
-    content="Portfolio website for Gurdeep Singh, a software engineer focused on product building, app development, and Generative AI systems."
+    content="Portfolio website for Gurdeep Singh, an AI-assisted full-stack product builder focused on premium websites, dashboards, automation workflows, and integration-ready systems."
   >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,265 +17,410 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#mainContent">Skip to content</a>
   <canvas id="matrixCanvas" aria-hidden="true"></canvas>
   <div class="noise" aria-hidden="true"></div>
+
   <div class="app-shell">
     <header class="topbar">
-      <a class="brand" href="#home">
+      <a class="brand" href="#home" aria-label="Gurdeep Singh home">
         <span class="brand-mark">GS</span>
         <span class="brand-copy">
           <strong>Gurdeep Singh</strong>
-          <span>Software Engineer / AI Generalist</span>
+          <span>AI-Assisted Full-Stack Product Builder</span>
         </span>
       </a>
+
       <nav class="topnav" aria-label="Primary">
         <a href="#about">About</a>
-        <a href="#expertise">Expertise</a>
-        <a href="#work">Work</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#projects">Projects</a>
+        <a href="#workflow">How I Work</a>
         <a href="#contact">Contact</a>
       </nav>
-      <button class="settings-toggle" type="button" aria-controls="settingsPanel" aria-expanded="false">
-        Settings
-      </button>
+
+      <a class="nav-cta" href="mailto:deejaydepp0517@gmail.com?subject=Project%20Inquiry">
+        Start a build
+      </a>
     </header>
 
-    <main>
+    <main id="mainContent">
       <section class="hero" id="home">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Product builder with AI-native execution</p>
-          <h1>Gurdeep Singh builds software that ships faster, thinks sharper, and works harder.</h1>
-          <p class="hero-text">
-            I design and build products, apps, and AI-assisted workflows that reduce manual effort,
-            improve accuracy, and turn ideas into usable systems quickly.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#work">Explore the work</a>
-            <button class="button button-secondary" type="button" data-open-settings>
-              Update profile fields
-            </button>
-          </div>
-        </div>
-        <div class="hero-panel reveal">
-          <div class="console">
-            <div class="console-top">
-              <span></span>
-              <span></span>
-              <span></span>
+        <div class="hero-shell">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">AI-Assisted Full-Stack Developer</p>
+            <h1>I build web products that feel sharp on the surface and solid underneath.</h1>
+            <p class="hero-subheadline">
+              Websites, dashboard systems, automation workflows, and integration-ready product surfaces
+              built with modern frontend discipline and backend-aware thinking.
+            </p>
+            <p class="hero-support">
+              My work combines React + TypeScript execution, structured AI-assisted delivery, and
+              verification-first iteration so the UI reads clean, the flows connect properly, and the
+              final product is ready for real use.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#projects">View selected builds</a>
+              <a class="button button-secondary" href="mailto:deejaydepp0517@gmail.com?subject=Project%20Inquiry">
+                Start a project conversation
+              </a>
             </div>
-            <div class="console-body">
-              <p>&gt; identity.role = <span data-profile="role">AI Generalist</span></p>
-              <p>&gt; focus.now = <span data-profile="focus">Building AI-powered products</span></p>
-              <p>&gt; location = <span data-profile="location" data-fallback="Set from settings">// add location</span></p>
-              <p>&gt; status = <span data-profile="availability" data-fallback="Set from settings">// add availability</span></p>
-              <p>&gt; mode = "ship useful systems"</p>
+
+            <ul class="hero-proof" aria-label="Core proof points">
+              <li>React / TypeScript</li>
+              <li>Automation Workflows</li>
+              <li>AI-Assisted Development</li>
+              <li>Dashboard Systems</li>
+              <li>Backend Integrations</li>
+            </ul>
+          </div>
+
+          <aside class="hero-stage reveal" id="heroStage" aria-label="Capability and system snapshot">
+            <div class="stage-frame">
+              <div class="stage-topbar">
+                <span class="stage-pill">Build Surface</span>
+                <span class="stage-live">
+                  <span class="signal-dot" aria-hidden="true"></span>
+                  Live capability snapshot
+                </span>
+              </div>
+
+              <div class="stage-headline-row">
+                <div>
+                  <p class="stage-label">Current positioning</p>
+                  <h2>Frontend-strong execution with integration-aware architecture.</h2>
+                </div>
+                <div class="stage-rotating">
+                  <p class="stage-label">Current mode</p>
+                  <p class="rotating-status" data-rotating-status>
+                    React surfaces. Workflow logic. API-aware delivery.
+                  </p>
+                </div>
+              </div>
+
+              <div class="stage-grid">
+                <div class="stage-column">
+                  <p class="stage-label">Command surface</p>
+                  <ul class="command-list">
+                    <li>
+                      <span>&gt; primary.build</span>
+                      <strong>Premium websites, dashboards, and internal product interfaces.</strong>
+                    </li>
+                    <li>
+                      <span>&gt; system.thinking</span>
+                      <strong>Auth flows, RBAC, API edges, webhook logic, and clean integration planning.</strong>
+                    </li>
+                    <li>
+                      <span>&gt; ai.usage</span>
+                      <strong>Generative AI, Codex, Antigravity, and automation tooling used with guardrails.</strong>
+                    </li>
+                    <li>
+                      <span>&gt; finish.standard</span>
+                      <strong>UX polish, structured iteration, and verification before handoff.</strong>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="stage-side">
+                  <div class="system-slab">
+                    <p class="stage-label">System surfaces</p>
+                    <ul class="surface-list">
+                      <li>Marketing and product websites</li>
+                      <li>Dashboard and admin interfaces</li>
+                      <li>Workflow tooling and automation layers</li>
+                      <li>Integration-ready frontend systems</li>
+                    </ul>
+                  </div>
+
+                  <div class="system-slab">
+                    <p class="stage-label">Guardrails</p>
+                    <ul class="guardrail-list">
+                      <li>Typed frontend structure</li>
+                      <li>Backend-aware contracts</li>
+                      <li>Security-conscious flow design</li>
+                      <li>Verification-driven release logic</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="stage-footer" aria-label="Build signals">
+                <span>Responsive UI Systems</span>
+                <span>Node / REST Integration</span>
+                <span>Automation Workflows</span>
+                <span>Verification Loops</span>
+              </div>
             </div>
-          </div>
-          <div class="signal-strip">
-            <span>GenAI product strategy</span>
-            <span>App prototyping</span>
-            <span>Workflow automation</span>
-            <span>Prompt systems</span>
-          </div>
+          </aside>
         </div>
       </section>
 
-      <section class="section intro reveal" id="about">
-        <div class="section-head">
+      <section class="section about" id="about">
+        <div class="section-heading reveal">
           <p class="eyebrow">About</p>
-          <h2>Engineering with an AI operator mindset.</h2>
+          <h2>I build modern websites, product surfaces, and workflow-driven systems that are meant to hold up after launch.</h2>
         </div>
-        <div class="intro-grid">
-          <p>
-            Gurdeep works like a product-minded engineer who uses AI tools as force multipliers, not shortcuts.
-            The goal is simple: compress build time, keep execution clear, and improve output quality.
-          </p>
-          <p>
-            From ideation to interface polish, he uses Generative AI, AI applications, and disciplined engineering
-            workflows to move from concept to working product with less waste and more precision.
-          </p>
-        </div>
-      </section>
 
-      <section class="section expertise" id="expertise">
-        <div class="section-head reveal">
-          <p class="eyebrow">Expertise</p>
-          <h2>Built for modern product teams that want speed without losing trust.</h2>
-        </div>
-        <div class="expertise-list">
-          <article class="expertise-item reveal">
-            <span class="item-index">01</span>
-            <div>
-              <h3>Product and app building with Generative AI</h3>
-              <p>
-                Turning fuzzy ideas into launched apps, prototypes, workflows, and internal tools with AI embedded
-                into the build process from day one.
-              </p>
-            </div>
-          </article>
-          <article class="expertise-item reveal">
-            <span class="item-index">02</span>
-            <div>
-              <h3>AI generalist execution</h3>
-              <p>
-                Working across prompting, research, automation, interfaces, and system design to connect the right
-                AI capabilities to the right product problem.
-              </p>
-            </div>
-          </article>
-          <article class="expertise-item reveal">
-            <span class="item-index">03</span>
-            <div>
-              <h3>Higher productivity with better accuracy</h3>
-              <p>
-                Using AI apps to remove repetitive work, accelerate decisions, and improve consistency so teams can
-                do more in less time without sacrificing quality.
-              </p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section work" id="work">
-        <div class="section-head reveal">
-          <p class="eyebrow">Selected Work Style</p>
-          <h2>How the work tends to get built.</h2>
-        </div>
-        <div class="work-grid">
-          <article class="work-card reveal">
-            <p class="card-label">01 / Discovery</p>
-            <h3>Map the product opportunity</h3>
-            <p>
-              Translate business goals into a scoped build path, identify leverage points for AI, and shape the
-              fastest route to a useful first version.
+        <div class="about-layout">
+          <div class="about-copy reveal">
+            <p class="about-lead">
+              My work sits where frontend polish meets backend awareness. I care about visual hierarchy, interaction quality,
+              responsive behavior, and the practical system decisions behind the UI.
             </p>
-          </article>
-          <article class="work-card reveal">
-            <p class="card-label">02 / Build</p>
-            <h3>Ship interfaces and working flows</h3>
             <p>
-              Turn concepts into pages, apps, automations, and interactive systems with a focus on usable output
-              instead of endless planning.
+              That means thinking through API contracts, auth and RBAC implications, integration points, webhook behavior,
+              and the operational reality of the product, not just the screen design. I use AI tools strategically to move faster,
+              but I still verify the output, tighten the details, and ship with intent.
             </p>
-          </article>
-          <article class="work-card reveal">
-            <p class="card-label">03 / Optimize</p>
-            <h3>Increase speed and trust together</h3>
             <p>
-              Refine prompts, tighten handoffs, and build repeatable AI-assisted workflows that improve delivery
-              quality over time.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section profile reveal" id="contact">
-        <div class="section-head">
-          <p class="eyebrow">Profile Output</p>
-          <h2>Live details that you can edit from Settings.</h2>
-        </div>
-        <div class="profile-layout">
-          <div class="profile-summary">
-            <p class="summary-label">Current positioning</p>
-            <h3 data-profile="headline">Software Engineer building AI-enhanced products</h3>
-            <p data-profile="bio">
-              Focused on shipping practical product experiences using Generative AI, AI apps, and strong engineering habits.
+              The result is work that feels premium to use, credible to review, and easier to extend when the product grows.
             </p>
           </div>
-          <dl class="profile-fields">
+
+          <div class="about-principles reveal">
+            <article>
+              <p class="eyebrow">01</p>
+              <h3>Frontend quality with system awareness</h3>
+              <p>Responsive interfaces, durable component patterns, and UI decisions that respect the backend they sit on.</p>
+            </article>
+            <article>
+              <p class="eyebrow">02</p>
+              <h3>AI used as structure, not decoration</h3>
+              <p>Generative AI, Codex, Antigravity, and automation tooling used inside a disciplined build and review loop.</p>
+            </article>
+            <article>
+              <p class="eyebrow">03</p>
+              <h3>Execution you can defend in a real room</h3>
+              <p>Clear tradeoffs, better UX judgment, and work that still makes sense when engineers and product people look closely.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section capabilities" id="capabilities">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Capabilities</p>
+          <h2>Cleanly grouped technical strengths, shaped around products that need real implementation depth.</h2>
+        </div>
+
+        <div class="capability-groups">
+          <article class="capability-group reveal">
+            <h3>Frontend</h3>
+            <ul>
+              <li>React</li>
+              <li>TypeScript</li>
+              <li>Vite</li>
+              <li>Responsive UI systems</li>
+              <li>Dashboard interfaces</li>
+            </ul>
+          </article>
+
+          <article class="capability-group reveal">
+            <h3>Backend / Integration</h3>
+            <ul>
+              <li>Node.js</li>
+              <li>NestJS</li>
+              <li>REST APIs</li>
+              <li>Auth flows and RBAC</li>
+              <li>Webhook and event-driven workflows</li>
+            </ul>
+          </article>
+
+          <article class="capability-group reveal">
+            <h3>Data / Infra</h3>
+            <ul>
+              <li>PostgreSQL</li>
+              <li>Redis</li>
+              <li>Prisma</li>
+              <li>Docker</li>
+              <li>Operational environment awareness</li>
+            </ul>
+          </article>
+
+          <article class="capability-group reveal">
+            <h3>AI / Automation</h3>
+            <ul>
+              <li>Automation workflows</li>
+              <li>AI-assisted development</li>
+              <li>Codex and Antigravity workflows</li>
+              <li>Prompt and tool orchestration</li>
+              <li>Verification-driven iteration</li>
+            </ul>
+          </article>
+
+          <article class="capability-group reveal">
+            <h3>Product / Engineering</h3>
+            <ul>
+              <li>Requirement structuring</li>
+              <li>Interaction design judgment</li>
+              <li>System decomposition</li>
+              <li>Handoff clarity</li>
+              <li>Execution quality control</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section projects" id="projects">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Selected Builds</p>
+          <h2>Project-style work shaped around product surfaces, integrations, and execution quality.</h2>
+        </div>
+
+        <article class="project-feature reveal">
+          <div class="project-feature-copy">
+            <p class="project-kicker">Featured System</p>
+            <h3>Modular Operations Dashboard</h3>
+            <p class="project-summary">
+              A role-aware dashboard product for teams that need one clean surface for metrics, approvals,
+              task states, and integration signals instead of scattered internal tooling.
+            </p>
+            <p>
+              Built to support modular UI composition, permission-aware views, stable API contracts, and operational clarity
+              across the product surface.
+            </p>
+          </div>
+
+          <div class="project-feature-meta">
             <div>
-              <dt>Email</dt>
-              <dd>
-                <a data-profile="email" data-link-type="email" data-fallback="Add your email in settings" href="#">
-                  Not set
-                </a>
-              </dd>
+              <dt>Stack</dt>
+              <dd>React, TypeScript, Node.js, PostgreSQL, Redis, RBAC</dd>
             </div>
             <div>
-              <dt>Location</dt>
-              <dd data-profile="location" data-fallback="Add your location in settings">Not set</dd>
+              <dt>Key capabilities</dt>
+              <dd>Role-based views, dashboard modules, API integration patterns, auth-aware architecture, operational UX</dd>
             </div>
             <div>
-              <dt>Availability</dt>
-              <dd data-profile="availability" data-fallback="Add your availability in settings">Not set</dd>
+              <dt>Outcome / value</dt>
+              <dd>A serious systems product surface that helps teams work from one coherent control layer.</dd>
             </div>
-            <div>
-              <dt>GitHub</dt>
-              <dd>
-                <a data-profile="github" data-link-type="url" data-fallback="Add your GitHub URL in settings" href="#">
-                  Not set
-                </a>
-              </dd>
-            </div>
-            <div>
-              <dt>LinkedIn</dt>
-              <dd>
-                <a data-profile="linkedin" data-link-type="url" data-fallback="Add your LinkedIn URL in settings" href="#">
-                  Not set
-                </a>
-              </dd>
-            </div>
-            <div>
-              <dt>Current focus</dt>
-              <dd data-profile="focus" data-fallback="Add your current focus in settings">Not set</dd>
-            </div>
-          </dl>
+          </div>
+        </article>
+
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <p class="project-kicker">Website Build</p>
+            <h3>Launch Website System</h3>
+            <p class="project-summary">
+              Premium marketing and product sites designed to position the offer clearly while staying maintainable and integration-ready.
+            </p>
+            <ul class="project-tags" aria-label="Launch Website System stack">
+              <li>React</li>
+              <li>TypeScript</li>
+              <li>Responsive UI</li>
+              <li>Performance-aware build</li>
+            </ul>
+            <p class="project-outcome">
+              Balances visual polish, conversion clarity, and future handoff quality instead of treating the site like a short-term campaign.
+            </p>
+          </article>
+
+          <article class="project-card reveal">
+            <p class="project-kicker">Automation Layer</p>
+            <h3>Workflow and Integration Engine</h3>
+            <p class="project-summary">
+              Automation-oriented tooling that links inputs, internal actions, AI assistance, and downstream systems through reliable events.
+            </p>
+            <ul class="project-tags" aria-label="Workflow and Integration Engine stack">
+              <li>Node.js</li>
+              <li>Webhooks</li>
+              <li>Auth-aware flows</li>
+              <li>AI tooling</li>
+            </ul>
+            <p class="project-outcome">
+              Reduces manual repetition and turns disconnected steps into structured, integration-ready workflows.
+            </p>
+          </article>
+
+          <article class="project-card reveal">
+            <p class="project-kicker">Product UI</p>
+            <h3>Dashboard Surface for Internal Teams</h3>
+            <p class="project-summary">
+              Interface work focused on high-signal layout, state clarity, and backend-aware UX for teams that spend real time inside the tool.
+            </p>
+            <ul class="project-tags" aria-label="Dashboard Surface for Internal Teams stack">
+              <li>Dashboard UX</li>
+              <li>Typed state</li>
+              <li>API contracts</li>
+              <li>Role-aware screens</li>
+            </ul>
+            <p class="project-outcome">
+              Gives internal systems a cleaner operating surface and makes product behavior easier to extend without UI drift.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section workflow" id="workflow">
+        <div class="section-heading reveal">
+          <p class="eyebrow">How I Work</p>
+          <h2>A structured build loop that keeps speed useful and quality defensible.</h2>
+        </div>
+
+        <ol class="workflow-steps">
+          <li class="reveal">
+            <span>01</span>
+            <h3>Understand the product shape</h3>
+            <p>Translate requirements into the real surface area: UI, states, integrations, permissions, edge cases, and delivery constraints.</p>
+          </li>
+          <li class="reveal">
+            <span>02</span>
+            <h3>Turn scope into buildable systems</h3>
+            <p>Break the work into components, routes, flows, contracts, and implementation milestones that can actually be executed cleanly.</p>
+          </li>
+          <li class="reveal">
+            <span>03</span>
+            <h3>Use AI strategically</h3>
+            <p>Leverage AI, Codex, Antigravity, and automation workflows to accelerate the right parts of the build without outsourcing judgment.</p>
+          </li>
+          <li class="reveal">
+            <span>04</span>
+            <h3>Iterate on interaction quality</h3>
+            <p>Tune layout, hierarchy, responsiveness, and states until the interface feels deliberate rather than merely functional.</p>
+          </li>
+          <li class="reveal">
+            <span>05</span>
+            <h3>Verify before release</h3>
+            <p>Check the result against the actual requirement, inspect edge behavior, and tighten the final output before it gets handed over.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="contact-panel reveal">
+          <div class="contact-copy">
+            <p class="eyebrow">Contact</p>
+            <h2>Need a serious website, dashboard, or workflow-driven product surface?</h2>
+            <p>
+              I’m best suited to work that needs strong frontend execution, disciplined product thinking,
+              and backend-aware implementation decisions from the start.
+            </p>
+          </div>
+
+          <div class="contact-actions">
+            <a class="button button-primary" href="mailto:deejaydepp0517@gmail.com?subject=Project%20Inquiry">
+              Email Gurdeep
+            </a>
+            <a class="button button-secondary" href="https://github.com/guru-max-ops" target="_blank" rel="noreferrer">
+              View GitHub
+            </a>
+          </div>
+
+          <div class="contact-meta">
+            <a href="mailto:deejaydepp0517@gmail.com">deejaydepp0517@gmail.com</a>
+            <a href="https://github.com/guru-max-ops" target="_blank" rel="noreferrer">github.com/guru-max-ops</a>
+          </div>
         </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <p>Gurdeep Singh</p>
+      <p>AI-assisted full-stack product builder for websites, dashboards, workflows, and integration-ready systems.</p>
+    </footer>
   </div>
 
-  <aside class="settings-panel" id="settingsPanel" aria-hidden="true">
-    <div class="settings-header">
-      <div>
-        <p class="eyebrow">Settings</p>
-        <h2>Edit portfolio fields</h2>
-      </div>
-      <button class="settings-close" type="button" aria-label="Close settings">Close</button>
-    </div>
-    <form id="settingsForm" class="settings-form">
-      <label>
-        Headline
-        <input type="text" name="headline" placeholder="Software Engineer building AI-enhanced products">
-      </label>
-      <label>
-        Short bio
-        <textarea name="bio" rows="4" placeholder="Write a short professional intro"></textarea>
-      </label>
-      <label>
-        Email
-        <input type="email" name="email" placeholder="you@example.com">
-      </label>
-      <label>
-        Location
-        <input type="text" name="location" placeholder="City, Country">
-      </label>
-      <label>
-        Availability
-        <input type="text" name="availability" placeholder="Open for freelance / full-time / consulting">
-      </label>
-      <label>
-        GitHub URL
-        <input type="url" name="github" placeholder="https://github.com/your-handle">
-      </label>
-      <label>
-        LinkedIn URL
-        <input type="url" name="linkedin" placeholder="https://linkedin.com/in/your-handle">
-      </label>
-      <label>
-        Current focus
-        <input type="text" name="focus" placeholder="What are you focused on right now?">
-      </label>
-      <label>
-        Role
-        <input type="text" name="role" placeholder="AI Generalist">
-      </label>
-      <div class="settings-actions">
-        <button class="button button-primary" type="submit">Save changes</button>
-        <button class="button button-secondary" type="button" id="resetProfile">Reset</button>
-      </div>
-    </form>
-  </aside>
-
-  <script src="script.js?v=20260321-3"></script>
+  <script src="script.js?v=20260321-4"></script>
 </body>
 </html>
