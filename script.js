@@ -189,7 +189,7 @@ function setupMatrixRain() {
       if (y > window.innerHeight && Math.random() > 0.985) {
         columns[index] = 0;
       } else {
-        columns[index] += 0.5;
+        columns[index] += 0.2;
       }
     });
 
