@@ -256,3 +256,33 @@ function setupMatrixRain() {
     }
   });
 }
+
+function openProjectModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.showModal();
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+  }
+}
+
+function closeProjectModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.close();
+    document.body.style.overflow = '';
+  }
+}
+
+// Close modal when clicking on backdrop
+document.addEventListener('click', (event) => {
+  if (event.target.tagName === 'DIALOG') {
+    const rect = event.target.getBoundingClientRect();
+    const isInDialog = (rect.top <= event.clientY && event.clientY <= rect.top + rect.height &&
+      rect.left <= event.clientX && event.clientX <= rect.left + rect.width);
+    if (!isInDialog) {
+      event.target.close();
+      document.body.style.overflow = '';
+    }
+  }
+});
+

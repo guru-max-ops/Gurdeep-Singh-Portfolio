@@ -288,133 +288,100 @@
           <h2>Project-style work shaped around product surfaces, business utility, and execution quality.</h2>
         </div>
 
-        <article class="project-feature reveal">
-          <div class="project-feature-copy">
-            <p class="project-kicker">Featured System</p>
-            <h3>Modular Operations Dashboard</h3>
+        <div class="project-grid" id="projectGrid">
+          <article class="project-card reveal clickable" onclick="openProjectModal('modal-chatwhatsapp')">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+              <span style="color: var(--accent); font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; letter-spacing: 0.1em;">01</span>
+              <p class="project-kicker" style="margin: 0;">Enterprise Chat Automation</p>
+            </div>
+            <h3 style="margin-top: 0;">TweekersNut ChatWhatsApp</h3>
             <p class="project-summary">
-              A role-aware dashboard product for teams that need one clean surface for metrics, approvals,
-              task states, and integration signals instead of scattered internal tooling.
+              A full-stack, multi-tenant CRM and automation platform for WhatsApp. Built with React, NestJS, and PostgreSQL.
             </p>
-            <p>
-              Built to support modular UI composition, permission-aware views, stable API contracts, and operational clarity
-              across the product surface.
-            </p>
-          </div>
+            <ul class="project-tags">
+              <li>React</li>
+              <li>NestJS</li>
+              <li>PostgreSQL</li>
+              <li>WebSockets</li>
+            </ul>
+            <p class="project-detail-label view-details">View Details &rarr;</p>
+          </article>
 
-          <div class="project-feature-meta">
-            <div>
-              <dt>Stack</dt>
-              <dd>React, TypeScript, Node.js, PostgreSQL, Redis, RBAC</dd>
+          <article class="project-card reveal clickable" onclick="openProjectModal('modal-chaisan')">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+              <span style="color: var(--accent); font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; letter-spacing: 0.1em;">02</span>
+              <p class="project-kicker" style="margin: 0;">B2B E-commerce & Lead Portal</p>
             </div>
-            <div>
-              <dt>Key capabilities</dt>
-              <dd>Role-based views, dashboard modules, API integration patterns, auth-aware architecture, and operational UX</dd>
-            </div>
-            <div>
-              <dt>Outcome / value</dt>
-              <dd>A serious systems product surface that helps teams work from one coherent control layer.</dd>
-            </div>
-          </div>
-        </article>
-
-        <div class="project-grid">
-          <article class="project-card reveal">
-            <p class="project-kicker">Website Build</p>
-            <h3>Launch Website System</h3>
+            <h3 style="margin-top: 0;">ChaiSan Global</h3>
             <p class="project-summary">
-              Marketing and product sites that position the offer clearly while staying maintainable and integration-ready.
+              A high-performance B2B portfolio and lead-generation portal for an international agricultural export business.
             </p>
-            <ul class="project-tags" aria-label="Launch Website System stack">
+            <ul class="project-tags">
+              <li>React 19</li>
+              <li>TypeScript</li>
+              <li>Vite</li>
+              <li>Vercel</li>
+            </ul>
+            <p class="project-detail-label view-details">View Details &rarr;</p>
+          </article>
+
+          <article class="project-card reveal clickable" onclick="openProjectModal('modal-freshmart')">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+              <span style="color: var(--accent); font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; letter-spacing: 0.1em;">03</span>
+              <p class="project-kicker" style="margin: 0;">E-Commerce Platform</p>
+            </div>
+            <h3 style="margin-top: 0;">FreshMart</h3>
+            <p class="project-summary">
+              A modern, full-stack grocery delivery platform with a highly interactive frontend and a secure, role-based shopkeeper dashboard.
+            </p>
+            <ul class="project-tags">
               <li>React</li>
               <li>TypeScript</li>
-              <li>Responsive systems</li>
-              <li>Build performance</li>
+              <li>Supabase</li>
+              <li>Razorpay</li>
             </ul>
-            <p class="project-detail-label">Key capabilities</p>
-            <ul class="project-points">
-              <li>Messaging hierarchy</li>
-              <li>Responsive section system</li>
-              <li>Maintainable frontend structure</li>
-            </ul>
-            <p class="project-outcome">
-              Balances visual polish, conversion clarity, and future handoff quality instead of treating the site like a short-term campaign.
-            </p>
+            <p class="project-detail-label view-details">View Details &rarr;</p>
           </article>
 
-          <article class="project-card reveal">
-            <p class="project-kicker">Small Business App</p>
-            <h3>Grocery Cart App for a Small Business</h3>
+          <article class="project-card reveal clickable" onclick="openProjectModal('modal-rajframers')">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+              <span style="color: var(--accent); font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; letter-spacing: 0.1em;">04</span>
+              <p class="project-kicker" style="margin: 0;">Custom E-Commerce Studio</p>
+            </div>
+            <h3 style="margin-top: 0;">Raj & Raj Framers</h3>
             <p class="project-summary">
-              A grocery ordering web app for a small business, built around catalog browsing, cart flow, and a straightforward customer journey.
+              A modern digital storefront featuring an interactive framing configurator and a direct-to-business WhatsApp checkout system.
             </p>
-            <ul class="project-tags" aria-label="Grocery Cart App for a Small Business stack">
-              <li>Catalog browsing</li>
-              <li>Cart state</li>
-              <li>Responsive UI</li>
-              <li>Business utility</li>
+            <ul class="project-tags">
+              <li>Next.js</li>
+              <li>TypeScript</li>
+              <li>Framer Motion</li>
+              <li>WhatsApp API</li>
             </ul>
-            <p class="project-detail-label">Key capabilities</p>
-            <ul class="project-points">
-              <li>Product catalog browsing</li>
-              <li>Cart and order flow</li>
-              <li>Practical customer-facing UI</li>
-            </ul>
-            <p class="project-outcome">
-              Shows practical business software execution through a usable ordering experience rather than a conceptual demo.
-            </p>
+            <p class="project-detail-label view-details">View Details &rarr;</p>
           </article>
 
-          <article class="project-card reveal">
-            <p class="project-kicker">Utility Product</p>
-            <h3>Free Tools Web App</h3>
+          <article class="project-card reveal clickable" onclick="openProjectModal('modal-songbird')">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+              <span style="color: var(--accent); font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; letter-spacing: 0.1em;">05</span>
+              <p class="project-kicker" style="margin: 0;">Desktop Media Player</p>
+            </div>
+            <h3 style="margin-top: 0;">SongBird</h3>
             <p class="project-summary">
-              A utility web platform that packages small focused tools into a clean, user-facing product.
+              A high-performance desktop media player featuring real-time 3D visualizations, dynamic UI theming, and robust local library management.
             </p>
-            <ul class="project-tags" aria-label="Free Tools Web App stack">
-              <li>Utility platform</li>
-              <li>Focused tools</li>
-              <li>Clean UI</li>
-              <li>Access-minded UX</li>
+            <ul class="project-tags">
+              <li>Electron</li>
+              <li>React 19</li>
+              <li>Three.js</li>
+              <li>SQLite</li>
             </ul>
-            <p class="project-detail-label">Key capabilities</p>
-            <ul class="project-points">
-              <li>Multi-tool information architecture</li>
-              <li>Focused input and result flows</li>
-              <li>Utility-first product framing</li>
-            </ul>
-            <p class="project-outcome">
-              Shows how small utilities can become a credible product surface instead of a loose collection of pages.
-            </p>
+            <p class="project-detail-label view-details">View Details &rarr;</p>
           </article>
 
-          <article class="project-card reveal">
-            <p class="project-kicker">Automation Layer</p>
-            <h3>Workflow and Integration Engine</h3>
-            <p class="project-summary">
-              Automation tooling that connects inputs, internal actions, AI assistance, and downstream systems through reliable event flow.
-            </p>
-            <ul class="project-tags" aria-label="Workflow and Integration Engine stack">
-              <li>Node.js</li>
-              <li>Webhooks</li>
-              <li>Auth-aware flows</li>
-              <li>AI workflows</li>
-            </ul>
-            <p class="project-detail-label">Key capabilities</p>
-            <ul class="project-points">
-              <li>Event-driven workflow orchestration</li>
-              <li>Guarded AI-assisted process steps</li>
-              <li>Connected system handoffs</li>
-            </ul>
-            <p class="project-outcome">
-              Reduces manual repetition and turns disconnected steps into structured, integration-ready workflows.
-            </p>
-          </article>
+          <!-- Placeholder for next project card -->
+          <div id="next-project-card-placeholder" style="display: none;"></div>
         </div>
-
-        <p class="projects-note reveal">
-          Deeper walkthroughs, live links, and additional screens can be shared project by project where public context fits the work.
-        </p>
       </section>
 
       <section class="section workflow" id="workflow">
@@ -491,6 +458,341 @@
       <p>AI-assisted full-stack product builder for websites, dashboards, workflows, and integration-ready systems.</p>
     </footer>
   </div>
+
+  <dialog id="modal-chatwhatsapp" class="project-modal">
+    <div class="project-modal-content">
+      <button class="modal-close" onclick="closeProjectModal('modal-chatwhatsapp')" aria-label="Close modal">×</button>
+      
+      <div class="modal-header">
+        <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 12px;">
+          <span style="color: var(--accent); font-family: 'IBM Plex Mono', monospace; font-size: 1rem; letter-spacing: 0.1em; padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px;">01</span>
+          <p class="project-kicker" style="margin: 0;">Enterprise Chat Automation Platform</p>
+        </div>
+        <h2 style="margin-top: 0;">TweekersNut ChatWhatsApp</h2>
+        <p class="project-summary">
+          A full-stack, multi-tenant CRM and automation platform for WhatsApp. It allows businesses to connect multiple WhatsApp instances, run bulk messaging campaigns, provide real-time customer support via a unified inbox, and visually construct automated chatbots.
+        </p>
+      </div>
+
+      <div class="modal-body project-feature" style="border: none; box-shadow: none; padding: 0; background: transparent; grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);">
+        <div class="project-feature-copy">
+          <p class="project-detail-label">My Role</p>
+          <p style="margin-top: 6px;">Lead Full-Stack Developer / Architect. Designed the database schema, engineered the NestJS micro-architecture backend with background job processing, and built the modular React dashboard including a complex visual bot builder.</p>
+          
+          <p class="project-detail-label">Major Features Built</p>
+          <ul class="project-points">
+            <li><strong>Visual Bot Builder:</strong> Interactive drag-and-drop canvas (React Flow) for conversational flows and API nodes.</li>
+            <li><strong>Campaign Engine:</strong> Bulk messaging system scheduling via background workers with compliance tracking.</li>
+            <li><strong>Omnichannel Inbox:</strong> Real-time chat combined with a built-in email ticketing system (ImapFlow).</li>
+            <li><strong>Webhook Ingestion Engine:</strong> Reliable processor with retry mechanisms and a Dead Letter Queue (DLQ).</li>
+            <li><strong>Contact Management:</strong> Dynamic contact lists with custom metadata and tags.</li>
+            <li><strong>RBAC & Multi-Tenancy:</strong> Granular access control and isolated instances per tenant.</li>
+          </ul>
+
+          <p class="project-detail-label">Frontend Work</p>
+          <ul class="project-points">
+            <li>Architected modular React dashboard (11 canonical modules).</li>
+            <li>Engineered state-heavy Visual Bot Editor mapping JSON-based logic.</li>
+            <li>Built responsive UI with Tailwind CSS, Ant Design, and Framer Motion.</li>
+            <li>Implemented real-time data layer using Socket.IO Client.</li>
+          </ul>
+
+          <p class="project-detail-label">Backend & Database Work</p>
+          <ul class="project-points">
+            <li>Built scalable NestJS backend with asynchronous processing via BullMQ and Redis.</li>
+            <li>Developed custom email integration layer parsing IMAP to support tickets.</li>
+            <li>Created WebSocket gateways for bidirectional updates.</li>
+            <li>Designed 25+ model PostgreSQL schema via Prisma, utilizing JSON fields for dynamic data.</li>
+          </ul>
+        </div>
+
+        <div class="project-feature-meta" style="align-self: start; background: var(--surface); padding: 24px; border: 1px solid var(--line); border-radius: var(--radius-medium);">
+          <div>
+            <dt>Tech Stack</dt>
+            <dd>
+              <strong>Frontend:</strong> React 18, TypeScript, Tailwind CSS, Ant Design, React Flow, Socket.IO<br>
+              <strong style="display:inline-block; margin-top: 8px;">Backend:</strong> NestJS 11, Node.js, BullMQ, WebSockets<br>
+              <strong style="display:inline-block; margin-top: 8px;">Database:</strong> PostgreSQL, Prisma ORM, Redis
+            </dd>
+          </div>
+          <div>
+            <dt>Architecture</dt>
+            <dd>Multi-tenant, Event-driven, Micro-architecture, Background Tasks</dd>
+          </div>
+          <div style="border-bottom: none; padding-bottom: 0;">
+            <dt>Security & Performance</dt>
+            <dd>JWT Auth, DB Encryption, Decoupled Worker Queues, DLQ</dd>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Placeholder for future modals -->
+  <div id="next-modal-placeholder"></div>
+
+  <dialog id="modal-songbird" class="project-modal">
+    <div class="project-modal-content">
+      <button class="modal-close" onclick="closeProjectModal('modal-songbird')" aria-label="Close modal">×</button>
+      
+      <div class="modal-header">
+        <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 12px;">
+          <span style="color: var(--accent); font-family: 'IBM Plex Mono', monospace; font-size: 1rem; letter-spacing: 0.1em; padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px;">05</span>
+          <p class="project-kicker" style="margin: 0;">Desktop Media Player</p>
+        </div>
+        <h2 style="margin-top: 0;">SongBird Media Player</h2>
+        <p class="project-summary">
+          A high-performance, visually immersive desktop media player designed to manage and play extensive local audio and video libraries with real-time 3D audio visualizations.
+        </p>
+      </div>
+
+      <div class="modal-body project-feature" style="border: none; box-shadow: none; padding: 0; background: transparent; grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);">
+        <div class="project-feature-copy">
+          <p class="project-detail-label">My Role</p>
+          <p style="margin-top: 6px;">Full Stack Desktop Application Engineer. Architected and developed the entire application from the ground up, designing the secure IPC bridge, engineering the SQLite database schema, building the WebGL visualizer engine, and optimizing the frontend for massive datasets.</p>
+          
+          <p class="project-detail-label">Major Features Built</p>
+          <ul class="project-points">
+            <li><strong>High-Speed Library Scanner:</strong> Background file system traversal engine parsing deep metadata/ID3 tags and indexing thousands of tracks securely via SQLite.</li>
+            <li><strong>Real-Time 3D Audio Visualizations:</strong> WebGL visualizer engine utilizing Three.js and the Web Audio API to drive frequency-reactive 3D environments.</li>
+            <li><strong>Intelligent Media Engine:</strong> Integrated FFmpeg to dynamically probe media files and transcode unsupported formats on the fly.</li>
+            <li><strong>Dynamic UI Theming:</strong> Extracted dominant hex accents from album artwork to dynamically theme the player interface in real-time.</li>
+            <li><strong>Robust Local State:</strong> Secure local file server and SQLite database configured with Write-Ahead Logging for high concurrency.</li>
+          </ul>
+
+          <p class="project-detail-label">Frontend Work</p>
+          <ul class="project-points">
+            <li>Engineered a buttery-smooth React 19 interface optimized for vast collections using react-window list virtualization to achieve a locked 60fps.</li>
+            <li>Piped HTMLAudioElement streams into the Web Audio API's AnalyserNode for Three.js canvases.</li>
+            <li>Created smooth micro-interactions and page transitions utilizing Framer Motion.</li>
+          </ul>
+
+          <p class="project-detail-label">Backend Work</p>
+          <ul class="project-points">
+            <li>Designed a secure, context-isolated IPC layer using preload scripts to pass data between the renderer and main process.</li>
+            <li>Managed FFmpeg child processes to handle complex media tasks without blocking the main event loop.</li>
+            <li>Engineered an optimized local SQLite database handling bulk upserts and tracking deep media metadata.</li>
+          </ul>
+        </div>
+
+        <div class="project-feature-meta" style="align-self: start; background: var(--surface); padding: 24px; border: 1px solid var(--line); border-radius: var(--radius-medium);">
+          <div>
+            <dt>Tech Stack</dt>
+            <dd>
+              <strong>Frontend:</strong> React 19, TypeScript, Three.js, Framer Motion<br>
+              <strong style="display:inline-block; margin-top: 8px;">Backend:</strong> Electron, Node.js, FFmpeg<br>
+              <strong style="display:inline-block; margin-top: 8px;">Database:</strong> Better SQLite3
+            </dd>
+          </div>
+          <div>
+            <dt>Architecture</dt>
+            <dd>Context-isolated IPC, List Virtualization, Web Audio API, Managed Child Processes</dd>
+          </div>
+          <div style="border-bottom: none; padding-bottom: 0;">
+            <dt>Optimization</dt>
+            <dd>SQLite Write-Ahead Logging (WAL), GPU-accelerated WebGL, Background Media Scanning</dd>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="modal-rajframers" class="project-modal">
+    <div class="project-modal-content">
+      <button class="modal-close" onclick="closeProjectModal('modal-rajframers')" aria-label="Close modal">×</button>
+      
+      <div class="modal-header">
+        <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 12px;">
+          <span style="color: var(--accent); font-family: 'IBM Plex Mono', monospace; font-size: 1rem; letter-spacing: 0.1em; padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px;">04</span>
+          <p class="project-kicker" style="margin: 0;">Custom E-Commerce & Framing Studio</p>
+        </div>
+        <h2 style="margin-top: 0;">Raj & Raj Framers</h2>
+        <p class="project-summary">
+          A Next.js-based e-commerce platform that bridges a traditional web catalog with direct customer communication, featuring a custom framing configurator and a seamless WhatsApp shopping cart.
+        </p>
+      </div>
+
+      <div class="modal-body project-feature" style="border: none; box-shadow: none; padding: 0; background: transparent; grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);">
+        <div class="project-feature-copy">
+          <p class="project-detail-label">My Role</p>
+          <p style="margin-top: 6px;">Lead Developer / Frontend Engineer. Architected the platform using the Next.js App Router, designed the interactive framing configurator, managed the global shopping cart state, and built an automated Node.js data processing pipeline.</p>
+          
+          <p class="project-detail-label">Major Features Built</p>
+          <ul class="project-points">
+            <li><strong>Custom Framing Configurator:</strong> Interactive tool to preview and configure frame materials and dimensions dynamically.</li>
+            <li><strong>E-Commerce Catalog & Cart:</strong> Fully functional product listing system with a global shopping cart that persists data using local storage.</li>
+            <li><strong>WhatsApp Checkout System:</strong> Custom flow bypassing traditional gateways by compiling cart items into a formatted WhatsApp message for direct fulfillment.</li>
+            <li><strong>Data Ingestion Pipeline:</strong> Node.js scripts built to process raw images, extract metadata, and automatically rebuild the TypeScript catalog.</li>
+          </ul>
+
+          <p class="project-detail-label">Frontend Work</p>
+          <ul class="project-points">
+            <li>Engineered a highly responsive, animated UI utilizing Tailwind CSS and Framer Motion.</li>
+            <li>Managed complex global state for the shopping cart using React Context and custom hooks.</li>
+            <li>Developed robust, type-safe forms with client-side validation using Zod for checkout workflows.</li>
+          </ul>
+
+          <p class="project-detail-label">Backend & Database Work</p>
+          <ul class="project-points">
+            <li>Implemented a headless static architecture relying on client-side state and WhatsApp routing to manage the business flow.</li>
+            <li>Designed a strictly typed static database architecture (TypeScript schemas) rebuilt dynamically via Node.js utility scripts at build time.</li>
+            <li>Developed an Admin-ready dashboard shell prepared for future isolated backend API integration and order persistence.</li>
+          </ul>
+        </div>
+
+        <div class="project-feature-meta" style="align-self: start; background: var(--surface); padding: 24px; border: 1px solid var(--line); border-radius: var(--radius-medium);">
+          <div>
+            <dt>Tech Stack</dt>
+            <dd>
+              <strong>Frontend:</strong> Next.js (App Router), React, TypeScript, Tailwind CSS, Framer Motion<br>
+              <strong style="display:inline-block; margin-top: 8px;">Scripts/Data:</strong> Node.js, Zod, image-size<br>
+              <strong style="display:inline-block; margin-top: 8px;">Integration:</strong> WhatsApp API
+            </dd>
+          </div>
+          <div>
+            <dt>Architecture</dt>
+            <dd>Headless Static Architecture, Build-time Data Seeding, Client-Side Cart</dd>
+          </div>
+          <div style="border-bottom: none; padding-bottom: 0;">
+            <dt>Security & Performance</dt>
+            <dd>Strict Zod Schema Validation, Next.js Static Generation (SSG), Local Storage Privacy</dd>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="modal-freshmart" class="project-modal">
+    <div class="project-modal-content">
+      <button class="modal-close" onclick="closeProjectModal('modal-freshmart')" aria-label="Close modal">×</button>
+      
+      <div class="modal-header">
+        <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 12px;">
+          <span style="color: var(--accent); font-family: 'IBM Plex Mono', monospace; font-size: 1rem; letter-spacing: 0.1em; padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px;">03</span>
+          <p class="project-kicker" style="margin: 0;">Full-Stack E-Commerce & Grocery Delivery Platform</p>
+        </div>
+        <h2 style="margin-top: 0;">FreshMart</h2>
+        <p class="project-summary">
+          A seamless shopping experience with animated interactions, a robust multi-step checkout flow, secure online payments, and a role-based shopkeeper dashboard to manage order fulfillment in real time.
+        </p>
+      </div>
+
+      <div class="modal-body project-feature" style="border: none; box-shadow: none; padding: 0; background: transparent; grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);">
+        <div class="project-feature-copy">
+          <p class="project-detail-label">My Role</p>
+          <p style="margin-top: 6px;">Full-Stack Developer. Architected and built the entire application from the ground up, designed the database schema, integrated backend services, developed highly interactive animations, and implemented secure payment gateways.</p>
+          
+          <p class="project-detail-label">Major Features Built</p>
+          <ul class="project-points">
+            <li><strong>Multi-Step Checkout Flow:</strong> Validates user addresses, handles delivery time slots, and securely processes payments.</li>
+            <li><strong>Secure Payment Integration:</strong> Integrated Razorpay via Supabase Edge Functions, strictly keeping API secrets hidden.</li>
+            <li><strong>Shopkeeper Admin Dashboard:</strong> Role-based portal for admins with real-time order tracking and mobile pull-to-refresh.</li>
+            <li><strong>Interactive Shopping Cart:</strong> Animated "FlyToCart" interactions with local state persistence and dynamic calculations.</li>
+            <li><strong>Role-Based Access Control (RBAC):</strong> Secure authentication flows separating standard users and administrators.</li>
+          </ul>
+
+          <p class="project-detail-label">Frontend Work</p>
+          <ul class="project-points">
+            <li>Built a reusable, accessible component library utilizing Tailwind CSS, Shadcn UI, and Lucide React.</li>
+            <li>Leveraged Framer Motion and GSAP for advanced smooth page transitions and custom complex UI micro-interactions.</li>
+            <li>Engineered a mobile-first responsive design featuring scalable UI components like expandable order cards.</li>
+          </ul>
+
+          <p class="project-detail-label">Backend & Database Work</p>
+          <ul class="project-points">
+            <li>Wrote serverless Deno Edge Functions to securely handle business logic like Razorpay order creation and validation.</li>
+            <li>Created custom PostgreSQL Remote Procedure Calls (RPCs) to allow secure querying and mutating of order data.</li>
+            <li>Designed a normalized PostgreSQL schema enforcing Row Level Security (RLS) with automated trigger updates.</li>
+          </ul>
+        </div>
+
+        <div class="project-feature-meta" style="align-self: start; background: var(--surface); padding: 24px; border: 1px solid var(--line); border-radius: var(--radius-medium);">
+          <div>
+            <dt>Tech Stack</dt>
+            <dd>
+              <strong>Frontend:</strong> React 18, TypeScript, Vite, Tailwind CSS, Shadcn UI, Framer Motion, GSAP<br>
+              <strong style="display:inline-block; margin-top: 8px;">Backend:</strong> Supabase (Edge Functions, Auth), Deno<br>
+              <strong style="display:inline-block; margin-top: 8px;">Database:</strong> PostgreSQL
+            </dd>
+          </div>
+          <div>
+            <dt>Integrations</dt>
+            <dd>Razorpay Payment Gateway, React Query</dd>
+          </div>
+          <div style="border-bottom: none; padding-bottom: 0;">
+            <dt>Security & Performance</dt>
+            <dd>Server-side Signature Verification, JWT Claims Validation, Row Level Security (RLS)</dd>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="modal-chaisan" class="project-modal">
+    <div class="project-modal-content">
+      <button class="modal-close" onclick="closeProjectModal('modal-chaisan')" aria-label="Close modal">×</button>
+      
+      <div class="modal-header">
+        <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 12px;">
+          <span style="color: var(--accent); font-family: 'IBM Plex Mono', monospace; font-size: 1rem; letter-spacing: 0.1em; padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px;">02</span>
+          <p class="project-kicker" style="margin: 0;">B2B E-commerce & Lead Generation Portal</p>
+        </div>
+        <h2 style="margin-top: 0;">ChaiSan Global</h2>
+        <p class="project-summary">
+          A high-performance, single-page B2B e-commerce portfolio and lead-generation portal designed for an international agricultural export business showcasing premium agro-products.
+        </p>
+      </div>
+
+      <div class="modal-body project-feature" style="border: none; box-shadow: none; padding: 0; background: transparent; grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);">
+        <div class="project-feature-copy">
+          <p class="project-detail-label">My Role</p>
+          <p style="margin-top: 6px;">Lead Frontend Engineer / Full-Stack Developer. Architected the frontend infrastructure from scratch, implemented the design system, engineered custom scroll animations, managed the DNS/deployment pipeline, and optimized for production delivery and SEO.</p>
+          
+          <p class="project-detail-label">Major Features Built</p>
+          <ul class="project-points">
+            <li><strong>Dynamic Product Routing:</strong> O(1) page loads via strictly-typed in-memory CMS architecture.</li>
+            <li><strong>Scroll-Triggered Micro-Animations:</strong> Custom IntersectionObserver engine delivering smooth UI reveals without external library bloat.</li>
+            <li><strong>Video Hero Sections:</strong> Responsive HTML5 video backgrounds with glassmorphism overlays and poster fallbacks.</li>
+            <li><strong>Global Data Store:</strong> Strongly-typed TypeScript CMS for zero-latency data retrieval (without a database).</li>
+            <li><strong>Marketing Integrations:</strong> Direct DOM injection of Meta Pixel with strict React hydration compatibility.</li>
+          </ul>
+
+          <p class="project-detail-label">Frontend Work</p>
+          <ul class="project-points">
+            <li>Architected modular component system across dynamic pages using React Router v6.</li>
+            <li>Implemented a fluid, mobile-first design with CSS variables and dark-mode aesthetics.</li>
+            <li>Hand-crafted WhatsApp communication links pre-populated with URL-encoded dynamic subject lines to reduce B2B friction.</li>
+          </ul>
+
+          <p class="project-detail-label">Infrastructure & Performance</p>
+          <ul class="project-points">
+            <li>Migrated from shared hosting to Vercel's Edge Network to resolve critical CDN-induced React hydration crashes.</li>
+            <li>Restructured DOM elements for SEO, adding semantic ARIA labels and pre-connecting critical rendering paths.</li>
+            <li>Replaced external icon libraries with hand-coded SVGs to fix build stability issues in CI/CD pipelines.</li>
+          </ul>
+        </div>
+
+        <div class="project-feature-meta" style="align-self: start; background: var(--surface); padding: 24px; border: 1px solid var(--line); border-radius: var(--radius-medium);">
+          <div>
+            <dt>Tech Stack</dt>
+            <dd>
+              <strong>Frontend:</strong> React 19, TypeScript, Vite, CSS3 Variables<br>
+              <strong style="display:inline-block; margin-top: 8px;">Infrastructure:</strong> Vercel (Edge CDN), StackCDN<br>
+              <strong style="display:inline-block; margin-top: 8px;">Analytics:</strong> Meta Pixel
+            </dd>
+          </div>
+          <div>
+            <dt>Architecture</dt>
+            <dd>Single Page Application, In-Memory CMS, Zero-latency Data Store</dd>
+          </div>
+          <div style="border-bottom: none; padding-bottom: 0;">
+            <dt>Optimization</dt>
+            <dd>IntersectionObserver animations, Semantic HTML, Pre-connected Fonts, Native SVG Icons</dd>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
 
   <script src="script.js?v=20260321-11"></script>
 </body>

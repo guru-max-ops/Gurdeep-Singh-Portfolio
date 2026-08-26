@@ -1087,3 +1087,104 @@ main {
     padding: 82px 0;
   }
 }
+
+.clickable {
+  cursor: pointer;
+}
+.view-details {
+  margin-top: auto;
+  color: var(--accent);
+  transition: transform 180ms ease;
+}
+.clickable:hover .view-details,
+.clickable:focus-visible .view-details {
+  transform: translateX(4px);
+}
+
+.project-modal {
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-large);
+  background: var(--bg);
+  color: var(--text);
+  max-width: 1100px;
+  width: 90%;
+  max-height: 90vh;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8);
+  margin: auto;
+  position: fixed;
+  inset: 0;
+}
+.project-modal::backdrop {
+  background: rgba(2, 9, 4, 0.85);
+  backdrop-filter: blur(8px);
+}
+.project-modal-content {
+  position: relative;
+  padding: 40px 48px;
+  overflow-y: auto;
+  max-height: 90vh;
+  background: linear-gradient(180deg, rgba(5, 18, 9, 0.96), rgba(3, 12, 6, 0.88)), rgba(5, 18, 9, 0.9);
+}
+.project-modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+.project-modal-content::-webkit-scrollbar-track {
+  background: rgba(4, 17, 8, 0.62);
+}
+.project-modal-content::-webkit-scrollbar-thumb {
+  background: var(--line-strong);
+  border-radius: 4px;
+}
+.modal-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: rgba(4, 17, 8, 0.72);
+  color: var(--text);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: all 180ms ease;
+  z-index: 10;
+}
+.modal-close:hover {
+  background: rgba(7, 24, 11, 0.92);
+  transform: scale(1.05);
+  color: var(--accent);
+}
+.modal-header {
+  margin-bottom: 32px;
+  padding-right: 48px;
+}
+.modal-header h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin: 12px 0 20px;
+  line-height: 1.1;
+}
+.modal-header .project-summary {
+  font-size: 1.1rem;
+  max-width: 80ch;
+}
+@media (max-width: 820px) {
+  .project-modal-content {
+    padding: 30px 24px;
+  }
+  .modal-header {
+    padding-right: 36px;
+  }
+  .modal-close {
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+  }
+}
+
