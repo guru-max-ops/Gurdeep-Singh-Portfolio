@@ -379,6 +379,42 @@
             <p class="project-detail-label view-details">View Details &rarr;</p>
           </article>
 
+          <article class="project-card reveal clickable" onclick="openProjectModal('modal-homoeo')">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+              <span style="color: var(--accent); font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; letter-spacing: 0.1em;">06</span>
+              <p class="project-kicker" style="margin: 0;">Full-Stack E-Commerce & Pharmacy</p>
+            </div>
+            <h3 style="margin-top: 0;">R.B. Homoeo Hall</h3>
+            <p class="project-summary">
+              A comprehensive e-commerce platform for a homoeopathic pharmacy featuring automated data pipelines, prescription uploads, and a robust Prisma/PostgreSQL architecture.
+            </p>
+            <ul class="project-tags">
+              <li>Next.js 15</li>
+              <li>Prisma</li>
+              <li>PostgreSQL</li>
+              <li>TypeScript</li>
+            </ul>
+            <p class="project-detail-label view-details">View Details &rarr;</p>
+          </article>
+
+          <article class="project-card reveal clickable" onclick="openProjectModal('modal-getmypc')">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+              <span style="color: var(--accent); font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; letter-spacing: 0.1em;">07</span>
+              <p class="project-kicker" style="margin: 0;">Interactive 3D WordPress Plugin</p>
+            </div>
+            <h3 style="margin-top: 0;">GetMyPC Builder</h3>
+            <p class="project-summary">
+              A premium visual PC builder plugin for WordPress integrating WooCommerce, a real-time compatibility engine, and a 3D interactive assembly preview.
+            </p>
+            <ul class="project-tags">
+              <li>React</li>
+              <li>Three.js (R3F)</li>
+              <li>WordPress API</li>
+              <li>WooCommerce</li>
+            </ul>
+            <p class="project-detail-label view-details">View Details &rarr;</p>
+          </article>
+
           <!-- Placeholder for next project card -->
           <div id="next-project-card-placeholder" style="display: none;"></div>
         </div>
@@ -530,6 +566,137 @@
 
   <!-- Placeholder for future modals -->
   <div id="next-modal-placeholder"></div>
+
+  <dialog id="modal-getmypc" class="project-modal">
+    <div class="project-modal-content">
+      <button class="modal-close" onclick="closeProjectModal('modal-getmypc')" aria-label="Close modal">×</button>
+      
+      <div class="modal-header">
+        <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 12px;">
+          <span style="color: var(--accent); font-family: 'IBM Plex Mono', monospace; font-size: 1rem; letter-spacing: 0.1em; padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px;">07</span>
+          <p class="project-kicker" style="margin: 0;">Interactive 3D WordPress Plugin</p>
+        </div>
+        <h2 style="margin-top: 0;">GetMyPC Builder</h2>
+        <p class="project-summary">
+          A premium visual PC builder plugin for WordPress designed to integrate with WooCommerce. It features a step-by-step guided flow, a real-time compatibility engine, and a fully interactive 3D assembly visualization.
+        </p>
+      </div>
+
+      <div class="modal-body project-feature" style="border: none; box-shadow: none; padding: 0; background: transparent; grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);">
+        <div class="project-feature-copy">
+          <p class="project-detail-label">My Role</p>
+          <p style="margin-top: 6px;">Lead Full-Stack Developer. Developed the comprehensive WordPress plugin integrating a robust PHP/REST backend with a modern, highly interactive React and React Three Fiber frontend.</p>
+          
+          <p class="project-detail-label">Major Features Built</p>
+          <ul class="project-points">
+            <li><strong>Interactive 3D Preview:</strong> Powered by Three.js (React Three Fiber), allowing users to see a 3D assembly of their PC build with rotate, zoom, and pan controls, complete with customizable RGB fan lighting.</li>
+            <li><strong>Compatibility Engine:</strong> Real-time backend checking for CPU/Motherboard socket matching, RAM type validation, GPU clearance, and PSU wattage calculation.</li>
+            <li><strong>Step-by-Step Builder Flow:</strong> Guided UI for users to select parts sequentially from CPU to Case, integrating smoothly into the 3D panel.</li>
+            <li><strong>WooCommerce Integration:</strong> Fetches products dynamically from store categories and enables adding the completed, custom-built PC directly to the cart.</li>
+            <li><strong>Custom REST API:</strong> Built a fully functioning WordPress REST API (<code>/wp-json/gmpc/v1/...</code>) to handle frontend requests and compatibility logic.</li>
+          </ul>
+
+          <p class="project-detail-label">Frontend 3D & UI Work</p>
+          <ul class="project-points">
+            <li>Optimized 3D rendering performance using lazy-loading and shared material batching for the dynamic assembly visualization.</li>
+            <li>Refined complex 3D component visuals including RAM stick placement, motherboard details, and storage drive animations.</li>
+            <li>Engineered a responsive "dark gaming" UI utilizing Tailwind CSS and Framer Motion for premium aesthetics.</li>
+          </ul>
+
+          <p class="project-detail-label">Deployment & Packaging</p>
+          <ul class="project-points">
+            <li>Configured Vite to compile the React application (including large Three.js chunks) into a production-ready package that deploys easily to WordPress environments without requiring Node.js on the server.</li>
+            <li>Maintained strict version control and repository cleanliness by managing complex dependencies and build artifacts.</li>
+          </ul>
+        </div>
+
+        <div class="project-feature-meta" style="align-self: start; background: var(--surface); padding: 24px; border: 1px solid var(--line); border-radius: var(--radius-medium);">
+          <div>
+            <dt>Tech Stack</dt>
+            <dd>
+              <strong>Frontend:</strong> React, Three.js (R3F), Tailwind CSS, Framer Motion<br>
+              <strong style="display:inline-block; margin-top: 8px;">Backend/CMS:</strong> WordPress REST API, PHP, WooCommerce<br>
+              <strong style="display:inline-block; margin-top: 8px;">Build Tooling:</strong> Vite
+            </dd>
+          </div>
+          <div>
+            <dt>Core Capabilities</dt>
+            <dd>Hardware Compatibility Algorithms, WebGL 3D Visualization, E-commerce Cart Integration</dd>
+          </div>
+          <div style="border-bottom: none; padding-bottom: 0;">
+            <dt>Optimization</dt>
+            <dd>3D Shared Material Batching, Lazy-Loading, Production Vite Compilation</dd>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="modal-homoeo" class="project-modal">
+    <div class="project-modal-content">
+      <button class="modal-close" onclick="closeProjectModal('modal-homoeo')" aria-label="Close modal">×</button>
+      
+      <div class="modal-header">
+        <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 12px;">
+          <span style="color: var(--accent); font-family: 'IBM Plex Mono', monospace; font-size: 1rem; letter-spacing: 0.1em; padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px;">06</span>
+          <p class="project-kicker" style="margin: 0;">Full-Stack E-Commerce Pharmacy</p>
+        </div>
+        <h2 style="margin-top: 0;">R.B. Homoeo Hall</h2>
+        <p class="project-summary">
+          A scalable, full-stack web architecture bridging traditional homoeopathic retail with modern digital commerce, complete with automated manufacturer data ingestion pipelines and prescription management.
+        </p>
+      </div>
+
+      <div class="modal-body project-feature" style="border: none; box-shadow: none; padding: 0; background: transparent; grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);">
+        <div class="project-feature-copy">
+          <p class="project-detail-label">My Role</p>
+          <p style="margin-top: 6px;">Lead Full-Stack Engineer. Designed the relational database architecture, developed the complete Next.js 15 frontend/backend, built automated data scraping pipelines with Playwright/Puppeteer, and implemented secure authentication and checkout workflows.</p>
+          
+          <p class="project-detail-label">Major Features Built</p>
+          <ul class="project-points">
+            <li><strong>Automated Data Pipelines:</strong> Developed extensive scraping scripts (Playwright/Puppeteer) to normalize and import thousands of products from manufacturer sites directly into PostgreSQL.</li>
+            <li><strong>Complex Database Architecture:</strong> Engineered a deep relational schema via Prisma managing nested categories, historical price snapshots, stock levels, and restricted medicine regulations.</li>
+            <li><strong>Medical Compliance Features:</strong> Implemented specialized models allowing customers to securely upload medical prescriptions for restricted items.</li>
+            <li><strong>Dynamic Storefront UI:</strong> Engineered responsive product cards with Flexbox auto-alignment, automated sliding brand marquees via Framer Motion, and randomized featured grids.</li>
+            <li><strong>Secure Authentication:</strong> Built smart authentication UI that dynamically alters navigation state via secure JSON Web Tokens (JWT) and bcrypt password hashing.</li>
+          </ul>
+
+          <p class="project-detail-label">Frontend Work</p>
+          <ul class="project-points">
+            <li>Leveraged the Next.js App Router for highly optimized server-side rendering and routing capabilities.</li>
+            <li>Built a utility-first, fully responsive UI utilizing Tailwind CSS v4 and Lucide React icons.</li>
+            <li>Engineered precision frontend features like personalized navigation states extracting user first names dynamically.</li>
+          </ul>
+
+          <p class="project-detail-label">Backend & Infrastructure</p>
+          <ul class="project-points">
+            <li>Deployed a highly resilient PostgreSQL 15 environment inside an isolated Docker container with automated live pg_dump SQL snapshots.</li>
+            <li>Utilized Zod extensively to validate incoming data structures and API requests before database insertion.</li>
+            <li>Processed raw image assets dynamically using Sharp for high-performance frontend optimization.</li>
+          </ul>
+        </div>
+
+        <div class="project-feature-meta" style="align-self: start; background: var(--surface); padding: 24px; border: 1px solid var(--line); border-radius: var(--radius-medium);">
+          <div>
+            <dt>Tech Stack</dt>
+            <dd>
+              <strong>Frontend:</strong> Next.js 15+, TypeScript, Tailwind CSS v4, Framer Motion<br>
+              <strong style="display:inline-block; margin-top: 8px;">Backend:</strong> Prisma v6, Node.js, bcryptjs, jose<br>
+              <strong style="display:inline-block; margin-top: 8px;">Database:</strong> PostgreSQL 15, Docker
+            </dd>
+          </div>
+          <div>
+            <dt>Tooling</dt>
+            <dd>Playwright/Puppeteer, Zod, Papaparse, Sharp, Git</dd>
+          </div>
+          <div style="border-bottom: none; padding-bottom: 0;">
+            <dt>Core Features</dt>
+            <dd>Automated Web Scraping Pipelines, Prescription Uploads, Dynamic Session Management</dd>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
 
   <dialog id="modal-songbird" class="project-modal">
     <div class="project-modal-content">
